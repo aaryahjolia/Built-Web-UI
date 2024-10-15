@@ -18,7 +18,7 @@ import CubeImage from './Assets/Cube_Image.png'
 function App() {
 
   useEffect(() => {
-    AOS.init({ 
+    AOS.init({
       duration: 1200,
       easing: 'ease-in-out',
     });

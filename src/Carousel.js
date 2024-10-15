@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Carousel() {
-  return (
-    <div>
-        
-    </div>
-  )
+
+
+    return (
+        <div>
+            
+        </div>
+    )
 }
 
 export default Carousel
