@@ -57,21 +57,21 @@ function Carousel_Main() {
                 draggable={false}
             >
                 <div className='custom_carousel p-10' onMouseEnter={() => handleMouseEnter(0)}>
-                    <div className='w-full h-96'>
+                    <div className='w-full h-96 mt-10'>
                         <img src={Carousel_1} alt='Carousel 1' className='w-full h-full object-cover rounded-2xl' />
                     </div>
                     <h1 className='text-center uppercase text-3xl mt-16'>Doritos after dark (NYC)</h1>
                 </div>
 
                 <div className='custom_carousel p-10' onMouseEnter={() => handleMouseEnter(1)}>
-                    <div className='w-full h-96'>
+                    <div className='w-full h-96 mt-10'>
                         <img src={Carousel_2} alt='Carousel 2' className='w-full h-full object-cover rounded-2xl' />
                     </div>
                     <h1 className='text-center uppercase text-3xl mt-16'>Hot Topic Room (YVR)</h1>
                 </div>
 
                 <div className='custom_carousel p-10' onMouseEnter={() => handleMouseEnter(2)}>
-                    <div className='w-full h-96'>
+                    <div className='w-full h-96 mt-10'>
                         <img src={Carousel_3} alt='Carousel 3' className='w-full h-full object-cover rounded-2xl' />
                     </div>
                     <h1 className='text-center uppercase text-3xl mt-16'>Party Stage (GUJ)</h1>
