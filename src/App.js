@@ -158,7 +158,7 @@ function App() {
       </div>
 
       {/* Carousel */}
-      <div>
+      <div data-aos="fade-up">
         <Carousel/>
       </div>
 

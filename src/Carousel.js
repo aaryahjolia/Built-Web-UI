@@ -1,13 +1,84 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 
-function Carousel() {
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
+import Carousel_1 from './Assets/Carousel_Images/Carousel_1.jpeg'
+import Carousel_2 from './Assets/Carousel_Images/Carousel_2.jpeg'
+import Carousel_3 from './Assets/Carousel_Images/Carousel_3.jpeg'
+
+function Carousel_Main() {
+
+    const responsive = {
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 1,
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 1,
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1,
+        }
+    };
+
+    const carouselRef = useRef();
+    let totalSlides = 3;
+    const [centerSlide, setCenterSlide] = useState(0);
+
+    const handleMouseEnter = (index) => {
+        // alert(centerSlide + " " + index);
+
+        if ((centerSlide + 1) % totalSlides === index) {
+            const nextSlide = carouselRef.current.state.currentSlide + 1;
+            carouselRef.current.goToSlide(nextSlide);
+            setCenterSlide(index);
+            return;
+        }
+        if ((centerSlide - 1) % totalSlides === index || (centerSlide === 0 && index !== 0)) {
+            const nextSlide = carouselRef.current.state.currentSlide - 1;
+            carouselRef.current.goToSlide(nextSlide);
+            setCenterSlide(index);
+            return;
+        }
+        
+    };
 
     return (
-        <div>
-            
+        <div className='w-full mt-40'>
+            <Carousel
+                ref={carouselRef}
+                infinite={true}
+                responsive={responsive}
+                centerMode={true}
+                removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
+                draggable={false}
+            >
+                <div className='custom_carousel p-10' onMouseEnter={() => handleMouseEnter(0)}>
+                    <div className='w-full h-96'>
+                        <img src={Carousel_1} className='w-full h-full object-cover rounded-2xl' />
+                    </div>
+                    <h1 className='text-center uppercase text-3xl mt-16'>Doritos after dark (NYC)</h1>
+                </div>
+
+                <div className='custom_carousel p-10' onMouseEnter={() => handleMouseEnter(1)}>
+                    <div className='w-full h-96'>
+                        <img src={Carousel_2} className='w-full h-full object-cover rounded-2xl' />
+                    </div>
+                    <h1 className='text-center uppercase text-3xl mt-16'>Hot Topic Room (YVR)</h1>
+                </div>
+
+                <div className='custom_carousel p-10' onMouseEnter={() => handleMouseEnter(2)}>
+                    <div className='w-full h-96'>
+                        <img src={Carousel_3} className='w-full h-full object-cover rounded-2xl' />
+                    </div>
+                    <h1 className='text-center uppercase text-3xl mt-16'>Party Stage (GUJ)</h1>
+                </div>
+            </Carousel>
         </div>
     )
 }
 
-export default Carousel
+export default Carousel_Main
