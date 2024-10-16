@@ -77,6 +77,14 @@ function App() {
         </div>
       </div>
 
+      <div className='flex justify-between items-start mt-10 mb-32 w-11/12 mx-auto' style={{ fontFamily: "Arial" }} data-aos="fade-up">
+          <h2 className='uppercase'>@2015</h2>
+          <div className='mr-28'>
+            <h1 className='uppercase'>@2024</h1>
+            <h1 className='uppercase mt-10'>WE ARE PLEASED TO <br/> ASSIST AGENCIES AT ALL LEVELS.</h1>
+          </div>
+      </div>
+
 
       <div className='w-11/12 mx-auto uppercase flex justify-between text-white my-20' style={{ fontFamily: "Arial" }} data-aos="fade-up">
         <h1>Everyday. We Work.</h1>
@@ -86,7 +94,7 @@ function App() {
 
 
       <div className='w-11/12 my-10 mx-auto'>
-        <h1 className='uppercase text-6xl text-center text-primary' data-aos="fade-up">What We do</h1>
+        <h1 className='uppercase text-6xl text-center text-primary my-24' data-aos="fade-up">What We do</h1>
 
         <div className='flex flex-wrap justify-around uppercase text-white w-4/5 mx-auto gap-40'>
 
@@ -159,7 +167,7 @@ function App() {
 
       {/* Carousel */}
       <div data-aos="fade-up">
-        <Carousel/>
+        <Carousel />
       </div>
 
       <div className='w-4/5 mx-auto flex justify-around uppercase my-32' data-aos="fade-up">
