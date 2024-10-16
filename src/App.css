@@ -28,7 +28,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin-bottom: 2rem; */
 }
 
 .react-multi-carousel-item--active .custom_carousel div img{

@@ -32,19 +32,19 @@ function App() {
         {/* Background image */}
         <img
           src={HomeBG}
-          alt="Background"
+          alt="Main Background"
           className="object-cover h-full w-full"
         />
-        {/* Content goes here */}
-        <div className="absolute inset-0  text-white">
+        {/* Content */}
+        <div className="absolute inset-0 text-white">
           <img
             src={Logo}
-            alt="Logo"
+            alt="Built Logo"
             className="mx-auto w-44 mt-24"
             data-aos="zoom-in"
           />
 
-          {/* Links Container */}
+          {/* Menu Links Container */}
           <div className="flex justify-center space-x-20 mt-10 uppercase text-2xl " data-aos="zoom-in">
             <a href="/" className="hover:underline">Services</a>
             <a href="/" className="hover:underline">Projects</a>
@@ -66,25 +66,26 @@ function App() {
               <h1 className='uppercase text-3xl mr-28'>LA / NYC</h1>
             </div>
 
-
           </div>
         </div>
       </div>
 
       <div className='text-white flex justify-end -mt-10'>
         <div className='uppercase inline-block mr-44'>
-          <h1 className='text-7xl leading-normal' data-aos="fade-up">Everyday. We Work. <br /><span className='text-8xl text-primary'>Built Beyond Limits.</span></h1>
+          <h1 className='text-7xl leading-normal' data-aos="fade-up">
+            Everyday. We Work. <br />
+            <span className='text-8xl text-primary'>Built Beyond Limits.</span>
+          </h1>
         </div>
       </div>
 
       <div className='flex justify-between items-start mt-10 mb-32 w-11/12 mx-auto' style={{ fontFamily: "Arial" }} data-aos="fade-up">
-          <h2 className='uppercase'>@2015</h2>
-          <div className='mr-28'>
-            <h1 className='uppercase'>@2024</h1>
-            <h1 className='uppercase mt-10'>WE ARE PLEASED TO <br/> ASSIST AGENCIES AT ALL LEVELS.</h1>
-          </div>
+        <h2 className='uppercase'>@2015</h2>
+        <div className='mr-28'>
+          <h1 className='uppercase'>@2024</h1>
+          <h1 className='uppercase mt-10'>WE ARE PLEASED TO <br /> ASSIST AGENCIES AT ALL LEVELS.</h1>
+        </div>
       </div>
-
 
       <div className='w-11/12 mx-auto uppercase flex justify-between text-white my-20' style={{ fontFamily: "Arial" }} data-aos="fade-up">
         <h1>Everyday. We Work.</h1>
@@ -92,7 +93,7 @@ function App() {
         <h1>Built Beyond Limits</h1>
       </div>
 
-
+      {/* What We Do Section */}
       <div className='w-11/12 my-10 mx-auto'>
         <h1 className='uppercase text-6xl text-center text-primary my-24' data-aos="fade-up">What We do</h1>
 
@@ -173,7 +174,6 @@ function App() {
       <div className='w-4/5 mx-auto flex justify-around uppercase my-32' data-aos="fade-up">
         <a href='/' className='uppercase text-6xl text-center text-white border-b-2 border-white pb-1'>View All Projects</a>
       </div>
-
 
       {/* Footer */}
       <div className='pb-16 w-11/12 mx-auto mt-48'>
