@@ -183,12 +183,12 @@ function App() {
             <Carousel />
           </div>
 
-          <div className='w-4/5 mx-auto flex justify-around uppercase my-32' data-aos="fade-up">
+          <div className='w-4/5 mx-auto flex justify-around uppercase my-32 mb-40' data-aos="fade-up">
             <a href='/' className='uppercase text-6xl text-center text-white border-b-2 border-white pb-1'>View All Projects</a>
           </div>
 
           {/* Footer */}
-          <div className='pb-16 w-11/12 mx-auto mt-48'>
+          <div className='pb-16 w-11/12 mx-auto'>
 
             <div className='flex justify-between items-end uppercase'>
               <h1 className='text-primary border-b-8 border-primary w-2/5 pb-2 text-mega leading-none' data-aos="fade-up">Lets Build.</h1>
