@@ -4,24 +4,24 @@
 
 
 @font-face {
-    font-family: 'Impact';
-    src: local('Impact'), url(../Impact_Font/impact.ttf) format('truetype');
+  font-family: 'Impact';
+  src: local('Impact'), url(../Impact_Font/impact.ttf) format('truetype');
 }
 
-.text-mega{
-    font-size: 13rem;
+.text-mega {
+  font-size: 13rem;
 }
 
-.custom_carousel{
+.custom_carousel {
   /* border: 2px solid white; */
   margin: 2rem 1rem;
 }
 
-.react-multi-carousel-item{
+.react-multi-carousel-item {
   padding: 2rem;
 }
 
-.react-multi-carousel-item--active .custom_carousel{
+.react-multi-carousel-item--active .custom_carousel {
   /* border: 2px solid red; */
   transform: translateY(-10%);
   display: flex;
@@ -30,6 +30,6 @@
   align-items: center;
 }
 
-.react-multi-carousel-item--active .custom_carousel div img{
+.react-multi-carousel-item--active .custom_carousel div img {
   box-shadow: 0px 0px 60px 10px #d30071;
 }

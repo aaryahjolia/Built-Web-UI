@@ -56,10 +56,10 @@ function Carousel_Main() {
                 infinite={true}
                 responsive={responsive}
                 centerMode={true}
-                removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
+                removeArrowOnDeviceType={["desktop", "tablet"]}
                 draggable={false}
             >
-                <div className='custom_carousel p-10' onMouseEnter={() => handleMouseEnter(0)} onMouseLeave={handleMouseLeave}>
+                <div className='custom_carousel md:p-10 w-full' onMouseEnter={() => handleMouseEnter(0)} onMouseLeave={handleMouseLeave}>
                     <div className='w-full h-96 mt-10'>
                         <img src={Carousel_1} alt='Carousel 1' className='w-full h-full object-cover rounded-2xl' />
                     </div>
