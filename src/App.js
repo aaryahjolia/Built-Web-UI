@@ -30,16 +30,56 @@ function App() {
 
   return (
     <div style={{ fontFamily: "Impact" }} className='bg-black text-white'>
-      <div className="relative bg-cover bg-center transform -translate-y-10">
-        {/* Overlay gradient */}
+      <div className="relative w-full aspect-[9/16] md:aspect-[16/9] bg-[url(./Assets/Hero_BG.png)] bg-no-repeat bg-cover bg-center before:absolute before:inset-0 before:bg-gradient-to-b before:from-transparent before:to-black before:opacity-100">
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-100" ></div> */}
+        <header className="bg-transparent flex py-2 px-6 sm:px-10 min-h-[84px] tracking-wide z-50 relative ">
+          <img
+            src={Logo}
+            alt="Built Logo"
+            className="mx-auto w-44 mt-12"
+            data-aos="zoom-in"
+          />
+        </header>
+
+        <div className="h-full">
+          <div className="w-full">
+            <div className="flex flex-col md:flex-row items-center md:justify-center space-y-4 md:space-y-0 space-x-0 md:space-x-20 mt-16 md:mt-8 uppercase text-2xl " data-aos="zoom-in">
+              <a href="/" className="hover:underline">Services</a>
+              <a href="/" className="hover:underline">Projects</a>
+              <a href="/" className="hover:underline">Venues</a>
+              <a href="/" className="hover:underline">About Us</a>
+            </div>
+
+            <h1 className='uppercase text-center mt-16 md:mt-5' style={{ fontFamily: "Arial" }} data-aos="fade-up">
+              A FUTURE FORWARD PRODUCTION COMPANY <br />
+              EXCELLING IN MODERN STATE OF THE ART EQUIPMENT.</h1>
+
+            <div className=' mx-auto' data-aos="fade-up">
+              <h1 className='uppercase text-5xl md:text-8xl md:text-right leading-none md:mt-64 md:mr-44 mt-20 text-center'>TRANSFORMING IDEAS <br /> INTO EXPERIENCES</h1>
+
+              <div className='flex justify-between items-start md:items-center text-xl mt-24 md:mt-10 w-10/12 mx-auto md:mr-44'>
+                <div className=''>
+                  <h2 className='uppercase'>@2015 <br /> Built Beyond Limits</h2>
+                </div>
+                <h1 className='uppercase text-3xl'>LA / NYC</h1>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Old Hero Section */}
+      {/* <div className="relative bg-no-repeat bg-center bg-cover z-50 before:absolute before:inset-0 before:bg-black/70" style={{ backgroundImage: `url(${HomeBG})` }}>
+
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-100" ></div>
-        {/* Background image */}
+
         <img
           src={HomeBG}
           alt="Main Background"
           className="object-cover h-full w-full"
         />
-        {/* Content */}
+
         <div className="absolute inset-0 text-white">
           <img
             src={Logo}
@@ -48,7 +88,7 @@ function App() {
             data-aos="zoom-in"
           />
 
-          {/* Menu Links Container */}
+
           <div className="flex justify-center space-x-20 mt-10 uppercase text-2xl" data-aos="zoom-in">
             <a href="/" className="hover:underline">Services</a>
             <a href="/" className="hover:underline">Projects</a>
@@ -72,7 +112,7 @@ function App() {
 
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* 
       <div className="relative bg-contain bg-center transform bg-repeat">
@@ -89,7 +129,7 @@ function App() {
         <div>
 
           <div className='text-white flex justify-end -mt-10'>
-            <div className='uppercase inline-block mr-44'>
+            <div className='uppercase inline-block md:mr-44 text-center md:text-left'>
               <h1 className='text-7xl leading-normal' data-aos="fade-up">
                 Everyday. We Work. <br />
                 <span className='text-8xl text-primary'>Built Beyond Limits.</span>
@@ -97,9 +137,9 @@ function App() {
             </div>
           </div>
 
-          <div className='flex justify-between items-start mt-10 mb-32 w-11/12 mx-auto' style={{ fontFamily: "Arial" }} data-aos="fade-up">
+          <div className='flex flex-col md:flex-row justify-between items-center md:items-start mt-10 md:mb-32 w-11/12 mx-auto' style={{ fontFamily: "Arial" }} data-aos="fade-up">
             <h2 className='uppercase'>@2015</h2>
-            <div className='mr-28'>
+            <div className='md:mr-28 text-center md:text-left mt-6 md:mt-0'>
               <h1 className='uppercase'>@2024</h1>
               <h1 className='uppercase mt-10'>WE ARE PLEASED TO <br /> ASSIST AGENCIES AT ALL LEVELS.</h1>
             </div>
@@ -170,9 +210,9 @@ function App() {
             <h1 className='my-2'>Built Beyond Limits</h1>
           </div>
 
-          <div className='w-10/12 mx-auto text-white flex flex-col md:flex-row justify-around items-center my-5' data-aos="fade-up">
+          <div className='w-full md:w-10/12 mx-auto text-white flex flex-col md:flex-row justify-around items-center my-5' data-aos="fade-up">
             <h2 className='my-6'>@2015</h2>
-            <div className='w-4/5 md:w-2/5'>
+            <div className='w-11/12 md:w-2/5'>
               <img src={CubeImage} alt="Cube" className="w-full object-contain" />
             </div>
             <h2 className='my-6'>@2024</h2>
@@ -210,7 +250,7 @@ function App() {
         </div>
       </div>
 
-    </div>
+    </div >
   );
 }
 

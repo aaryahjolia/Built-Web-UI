@@ -5,9 +5,12 @@ module.exports = {
     extend: {
       colors: {
         'primary': '#d30071',
-      }
+      },
+      backgroundImage: {
+        HeroBG: "url('./Assets/Hero_BG.png')",
+      },
     },
-    
+
   },
   plugins: [],
 }
