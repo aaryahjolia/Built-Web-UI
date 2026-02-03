@@ -2,6 +2,7 @@ import './tailwind.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Carousel from './Carousel';
+import AnimatedBackground from './AnimatedBackground';
 import { useEffect } from 'react';
 
 
@@ -126,7 +127,8 @@ function App() {
         <div className="absolute inset-0 text-white">
       */}
       <div className="relative bg-black text-white">
-        <div>
+        <AnimatedBackground />
+        <div className="relative">
 
           <div className='text-white flex justify-end -mt-10'>
             <div className='uppercase inline-block md:mr-44 text-center md:text-left'>

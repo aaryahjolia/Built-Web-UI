@@ -47,3 +47,20 @@
     transform: translateY(0%);
   }
 }
+
+/* Animated Lines Background */
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animated-line {
+  animation-name: moveLeftToRight;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
