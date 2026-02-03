@@ -5,13 +5,13 @@ const GlowSection = ({ position, top, color = "#d30071" }) => {
     const alignClass = isRight ? 'right-0 translate-x-1/2' : 'left-0 -translate-x-1/2';
 
     // Generate simplified lines for this specific section
-    const lines = Array.from({ length: 4 }).map((_, i) => ({
-        top: `${Math.random() * 100}%`,
-        animationDuration: `${15 + Math.random() * 15}s`,
-        animationDelay: `-${Math.random() * 10}s`,
-        opacity: 0.15 + Math.random() * 0.2,
-        // If right aligned, maybe move differently? keeping simple left-to-right for now
-    }));
+    // const lines = Array.from({ length: 4 }).map((_, i) => ({
+    //     top: `${Math.random() * 100}%`,
+    //     animationDuration: `${15 + Math.random() * 15}s`,
+    //     animationDelay: `-${Math.random() * 10}s`,
+    //     opacity: 0.15 + Math.random() * 0.2,
+    //     // If right aligned, maybe move differently? keeping simple left-to-right for now
+    // }));
 
     return (
         <div className={`absolute w-full h-[800px] pointer-events-none overflow-hidden`} style={{ top }}>

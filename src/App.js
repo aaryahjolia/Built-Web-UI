@@ -7,8 +7,8 @@ import StatsSection from './components/StatsSection';
 import { useEffect } from 'react';
 
 
-import HomeBG from './Assets/Hero_BG.png'
-import MainBG from './Assets/Main_BG.png'
+// import HomeBG from './Assets/Hero_BG.png'
+// import MainBG from './Assets/Main_BG.png'
 import Logo from './Assets/Logo.png'
 import Work_1 from './Assets/Work_Images/Work_1.png'
 import Work_2 from './Assets/Work_Images/Work_2.png'
