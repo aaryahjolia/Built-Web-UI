@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import MobileDetect from "mobile-detect";
 
 import Carousel_1 from './Assets/Carousel_Images/Carousel_1.jpeg'
 import Carousel_2 from './Assets/Carousel_Images/Carousel_2.jpeg'
@@ -23,6 +24,17 @@ function Carousel_Main() {
             items: 1,
         }
     };
+
+    let deviceType;
+    const userAgent = typeof navigator === 'undefined' ? 'SSR' : navigator.userAgent;
+    const md = new MobileDetect(userAgent);
+    if (md.tablet()) {
+        deviceType = "tablet";
+    } else if (md.mobile()) {
+        deviceType = "mobile";
+    } else {
+        deviceType = "desktop";
+    }
 
     const carouselRef = useRef();
     let totalSlides = 3;
@@ -55,25 +67,28 @@ function Carousel_Main() {
                 ref={carouselRef}
                 infinite={true}
                 responsive={responsive}
-                centerMode={true}
+                centerMode={deviceType !== "mobile"}
                 removeArrowOnDeviceType={["desktop", "tablet"]}
-                draggable={false}
+                draggable={true}
+                autoPlay={true}
+                autoPlaySpeed={2000}
+                showDots={true}
             >
-                <div className='custom_carousel md:p-10 w-full' onMouseEnter={() => handleMouseEnter(0)} onMouseLeave={handleMouseLeave}>
+                <div className='custom_carousel p-1 md:p-10' onMouseEnter={() => handleMouseEnter(0)} onMouseLeave={handleMouseLeave}>
                     <div className='w-full h-96 mt-10'>
                         <img src={Carousel_1} alt='Carousel 1' className='w-full h-full object-cover rounded-2xl' />
                     </div>
                     <h1 className='text-center uppercase text-3xl mt-16'>Doritos after dark (NYC)</h1>
                 </div>
 
-                <div className='custom_carousel p-10' onMouseEnter={() => handleMouseEnter(1)} onMouseLeave={handleMouseLeave}>
+                <div className='custom_carousel p-1 md:p-10' onMouseEnter={() => handleMouseEnter(1)} onMouseLeave={handleMouseLeave}>
                     <div className='w-full h-96 mt-10'>
                         <img src={Carousel_2} alt='Carousel 2' className='w-full h-full object-cover rounded-2xl' />
                     </div>
                     <h1 className='text-center uppercase text-3xl mt-16'>Hot Topic Room (YVR)</h1>
                 </div>
 
-                <div className='custom_carousel p-10' onMouseEnter={() => handleMouseEnter(2)} onMouseLeave={handleMouseLeave}>
+                <div className='custom_carousel p-1 md:p-10' onMouseEnter={() => handleMouseEnter(2)} onMouseLeave={handleMouseLeave}>
                     <div className='w-full h-96 mt-10'>
                         <img src={Carousel_3} alt='Carousel 3' className='w-full h-full object-cover rounded-2xl' />
                     </div>
