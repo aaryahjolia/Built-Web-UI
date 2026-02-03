@@ -1,8 +1,9 @@
 import './tailwind.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Carousel from './Carousel';
-import AnimatedBackground from './AnimatedBackground';
+import Carousel from './components/Carousel';
+import AnimatedBackground from './components/AnimatedBackground';
+import StatsSection from './components/StatsSection';
 import { useEffect } from 'react';
 
 
@@ -225,6 +226,10 @@ function App() {
             <h1>LOS ANGELES / NEW YORK CITY</h1>
             <h1>Built Beyond Limits</h1>
           </div>
+
+
+          {/* Stats Section */}
+          <StatsSection />
 
           {/* Carousel */}
           <div data-aos="fade-up">

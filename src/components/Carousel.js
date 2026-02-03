@@ -4,9 +4,9 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import MobileDetect from "mobile-detect";
 
-import Carousel_1 from './Assets/Carousel_Images/Carousel_1.jpeg'
-import Carousel_2 from './Assets/Carousel_Images/Carousel_2.jpeg'
-import Carousel_3 from './Assets/Carousel_Images/Carousel_3.jpeg'
+import Carousel_1 from '../Assets/Carousel_Images/Carousel_1.jpeg'
+import Carousel_2 from '../Assets/Carousel_Images/Carousel_2.jpeg'
+import Carousel_3 from '../Assets/Carousel_Images/Carousel_3.jpeg'
 
 function Carousel_Main() {
 
